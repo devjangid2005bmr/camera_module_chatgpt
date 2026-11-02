@@ -7,7 +7,8 @@ const { createClient } = require("@supabase/supabase-js");
 const app = express();
 app.use(helmet({ crossOriginResourcePolicy: { policy: "cross-origin" } }));
 app.use(express.json({ limit: "3mb" }));
-app.use(express.static("public"));
+const path = require("path");
+app.use(express.static(path.join(__dirname, "public")));
 app.use("/api/", rateLimit({ windowMs: 60_000, limit: 40 }));
 
 const { SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY } = process.env;
