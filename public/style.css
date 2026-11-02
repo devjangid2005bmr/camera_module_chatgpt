@@ -1,0 +1,273 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 24px 16px;
+  background: #090b10;
+  color: #f5f6fa;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, sans-serif;
+  display: grid;
+  place-items: center;
+}
+
+.app {
+  width: min(100%, 760px);
+  min-height: 690px;
+  padding: 26px 34px 20px;
+  border: 1px solid #2b3040;
+  border-radius: 24px;
+  background: radial-gradient(ellipse at 50% 0%, #252c42 0, #141925 38%, #101216 80%);
+  box-shadow: 0 25px 90px #0008;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ffffff18;
+  padding-bottom: 19px;
+}
+
+.brand {
+  font-weight: 800;
+  font-size: 21px;
+  letter-spacing: -.5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pill {
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: #c7cce0;
+  border: 1px solid #555e78;
+  border-radius: 99px;
+  padding: 8px 12px;
+}
+
+.panel {
+  width: min(100%, 450px);
+  margin: 48px auto 28px;
+}
+
+.mark {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  background: #2b3349;
+  border-radius: 18px;
+  font-size: 27px;
+  margin-bottom: 22px;
+  color: #fff;
+}
+
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #9ca8c6;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(31px, 6vw, 44px);
+  line-height: 1.1;
+  letter-spacing: -1.8px;
+  margin: 12px 0;
+}
+
+h1 span {
+  display: block;
+  color: #a8b9ff;
+}
+
+.muted {
+  color: #aab1c2;
+}
+
+.small {
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+form {
+  display: grid;
+  gap: 16px;
+  margin-top: 27px;
+}
+
+label {
+  display: grid;
+  gap: 8px;
+  color: #d8dce7;
+  font-size: 13px;
+}
+
+input {
+  background: #0b0e15;
+  border: 1px solid #363e50;
+  border-radius: 11px;
+  padding: 14px;
+  color: white;
+  font: inherit;
+  outline: none;
+}
+
+input:focus {
+  border-color: #9eafff;
+  box-shadow: 0 0 0 3px #8298ff20;
+}
+
+button {
+  width: 100%;
+  border: 0;
+  border-radius: 11px;
+  padding: 14px 17px;
+  background: #eef1ff;
+  color: #171b28;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+button:disabled {
+  opacity: .6;
+  cursor: wait;
+}
+
+button span {
+  float: right;
+}
+
+.error {
+  color: #ff9b9b;
+  font-size: 13px;
+  min-height: 18px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.success {
+  display: inline-block;
+  background: #173827;
+  color: #a9e8bf;
+  border: 1px solid #2b6545;
+  border-radius: 99px;
+  padding: 8px 12px;
+  font-size: 12px;
+}
+
+.welcome {
+  margin: 25px 0;
+}
+
+.message {
+  padding: 22px;
+  border: 1px solid #3b4560;
+  border-radius: 16px;
+  background: #20283a;
+  font-size: 17px;
+  line-height: 1.8;
+  margin: 8px 0 25px;
+}
+
+.notice {
+  padding: 19px;
+  border: 1px solid #515d7b;
+  border-radius: 15px;
+  background: #171e2d;
+}
+
+.notice h2 {
+  font-size: 16px;
+  margin: 0 0 12px;
+}
+
+.notice p {
+  font-size: 13px;
+  line-height: 1.65;
+  color: #d0d5e2;
+}
+
+.notice strong {
+  color: #fff;
+}
+
+.secondary {
+  background: transparent;
+  color: #c4cada;
+  border: 1px solid #485168;
+}
+
+.camera {
+  margin-top: 20px;
+}
+
+.stop {
+  background: #ffdede;
+  color: #651e1e;
+}
+
+.cameraStatus {
+  font-size: 13px;
+}
+
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0;
+  gap: 16px;
+  text-align: center;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  border-top-color: #10a37f;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.hidden-preview {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+footer {
+  margin-top: auto;
+  text-align: center;
+  color: #697185;
+  font-size: 11px;
+  padding-top: 20px;
+}
+
+@media(max-width: 520px) {
+  .app {
+    padding: 20px 18px;
+    min-height: calc(100vh - 32px);
+  }
+  .panel {
+    margin-top: 38px;
+  }
+}
