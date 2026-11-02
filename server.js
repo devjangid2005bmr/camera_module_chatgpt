@@ -85,5 +85,12 @@ app.post("/api/photos", async (req, res) => {
 });
 
 app.get("/api/health", (_, res) => res.json({ ok: true }));
+
 const port = process.env.PORT || 3000;
-app.listen(port, () => console.log(`BatGPT ready at http://localhost:${port}`));
+
+if (process.env.NODE_ENV !== "production") {
+  app.listen(port, () => console.log(`BatGPT ready at http://localhost:${port}`));
+}
+
+// Vercel export ke liye
+module.exports = app;
